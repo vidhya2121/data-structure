@@ -39,10 +39,10 @@ public class MaxSubArrays {
 		}
 		for (; i < n; i++) {
 			sb.append(a[d.peek()] + " ");
-			while (!d.isEmpty() && i - k > d.peekFirst()) {
+			while (!d.isEmpty() && i - k >= d.peekFirst()) {
 				d.pollFirst();
 			}
-			while (!d.isEmpty() && a[i]>a[d.peekLast()]) {
+			while (!d.isEmpty() && a[i] > a[d.peekLast()]) {
 				d.pollLast();
 			}
 			d.add(i);
