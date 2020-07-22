@@ -1,4 +1,4 @@
-package com.stack_queues;
+package com.amaze.stack_queues;
 
 // { Driver Code Starts
 import java.util.*;

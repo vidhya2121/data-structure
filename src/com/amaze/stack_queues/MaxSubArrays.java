@@ -1,4 +1,4 @@
-package com.stack_queues;
+package com.amaze.stack_queues;
 
 import java.io.BufferedReader;
 import java.io.IOException;
