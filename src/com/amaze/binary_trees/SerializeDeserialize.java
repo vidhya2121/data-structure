@@ -124,8 +124,8 @@ class Tree33 {
 		if (val == -1)
 			return null;
 		Node root = new Node(val);
-		root.left = deSerialize(A);
-		root.right = deSerialize(A);
+		root.left = deSer(A);
+		root.right = deSer(A);
 		return root;
 	}
 }
