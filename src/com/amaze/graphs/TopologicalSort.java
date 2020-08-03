@@ -63,7 +63,7 @@ public class TopologicalSort {
  * and edges between them N: represent number of vertices
  */
 class Graph1 {
-	static int[] topoSort(ArrayList<ArrayList<Integer>> adj, int N) {
+	public static int[] topoSort(ArrayList<ArrayList<Integer>> adj, int N) {
 		int[] res = new int[N];
 		Stack<Integer> stack = new Stack<>();
 		boolean visited[] = new boolean[N];
@@ -77,7 +77,7 @@ class Graph1 {
 			res[i] = stack.pop();
 			i++;
 		}
-		System.out.println(Arrays.toString(res));
+//		System.out.println(Arrays.toString(res));
 		return res;
 		// add your code here
 	}
