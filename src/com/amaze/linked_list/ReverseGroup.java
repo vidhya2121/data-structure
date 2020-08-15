@@ -38,6 +38,34 @@ class ReverseGroup {
 	}
 
 }
+/*
+ * Input:
+		2
+		8
+		1 2 2 4 5 6 7 8
+		4
+		5
+		1 2 3 4 5
+		3
+		
+	Output:
+		4 2 2 1 8 7 6 5
+		3 2 1 5 4
+ */
+
+/*
+ * solution includes both loop and recursion
+ * prev=null curr=head next=null
+ * loop till curr != null and i < k
+ * 		next = curr.next
+ * 		curr.next = prev
+ * 		prev = curr
+ *		curr = next
+ * if curr is not null
+ * 		node.next -> reverse(next, k )
+ * return prev
+ * 		
+ */
 
 class GfG {
 	public static Node reverse(Node node, int k) {

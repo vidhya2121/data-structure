@@ -3,7 +3,7 @@ package com.amaze.array;
 public class LastOne {
 
 	public static void main(String[] args) {
-
+		/*straight forward*/
 		String str = "01000001";
 		char c[] = str.toCharArray();
 		for(int i = c.length-1;i>=0;i--) {

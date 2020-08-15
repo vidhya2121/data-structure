@@ -88,12 +88,30 @@ class RemoveLoop {
 		}
 	}
 }
-// } Driver Code Ends
+ /*
+  * Input:
+	N = 3
+	value[] = {1,3,4}
+	C = 2
+	Output: 1
+	Explanation: In the first test case
+	N = 3.The linked list with nodes
+	N = 3 is given. Here, x = 2 which
+	means last node is connected with xth
+	node of linked list. Therefore, there
+	exists a loop. 
+  */
 
 /*
- * class Node { int data; Node next; }
+ * set slow as head and fast as head.next
+ * loop till slow!=fast
+ * 		if fast or fast.next becomes null then no loop so return 
+ * initialize count to 0 and count from slow.next to next slow
+ * set both fast and slow to head
+ * move fast count times
+ * loop till slow!=fast.next
+ * fast.next=null
  */
-
 class solver {
 	public static void removeLoop(Node1 head) {
 		// code here

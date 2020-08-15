@@ -86,7 +86,27 @@ public class FlattenLL {
 }
 
 /*
- * Function which returns the root of the flattened linked list.
+ * Given a Linked List of size N, where every node represents a linked list and contains two pointers of its type:
+	(i) a next pointer to the next node,
+	(ii) a bottom pointer to a linked list where this node is head.
+	
+	You have to flatten the linked list to a single linked list which should be sorted.
+ */
+/*
+ * Each node has next and bottom
+ * function flatten with Node as arg
+ * if root or root.next is null return
+ * root.next = flatten(root.next)
+ * root = merge(root, root.next)
+ * 
+ * function merge tkes 2 nodes a and b
+ * declare a res node
+ * if  is null return b and vice versa
+ * if a.data < b.data
+ * 		res = a
+ * 		res.bottom = merge(a.bottom , b)
+ * same if else
+ * return res
  */
 class GfG2 {
 	Node2 flatten(Node2 root) {

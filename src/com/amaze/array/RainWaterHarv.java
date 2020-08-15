@@ -3,8 +3,37 @@ package com.amaze.array;
 public class RainWaterHarv {
 
 	public static void main(String[] args) {
-
-		int a[] = { 7, 4, 0, 9, 8, 5, 7 };
+		/*
+		 * Given an array arr[] of N non-negative integers representing height 
+		 * of blocks at index i as Ai where the width of each block is 1. 
+		 * Compute how much water can be trapped in between blocks after raining.
+			Structure is like below:
+			| |
+			|_|
+			We can trap 2 units of water in the middle gap.
+		 */
+		/*
+		 * Input:
+			2
+			4
+			7 4 0 9
+			3
+			6 9 9
+			
+		   Output:
+			10
+			0
+		 */
+		int a[] = { 7, 4, 0, 9 };
+		/*
+		 * initialize low as 0 high as n - 1 count as 0 left_max = 0 right_max = 0
+		 * loop from low to high (<=)
+		 * 		if a[low] < a[high]
+		 * 			if a[low] > left_max set left_max as a[low]
+		 * 			else increment count as (left_max - a[low])
+		 * 		low++
+		 * 		similar logic for else
+		 */
 		optRain(a, a.length);
 	}
 
@@ -30,29 +59,6 @@ public class RainWaterHarv {
 			}
 		}
 		System.out.println(count);
-	}
-
-	private static void rain(int[] a, int n) {
-
-		int count = 0;
-		for (int i = 1; i < n - 1; i++) {
-			int f = max(a, 0, i);
-			int l = max(a, i, n);
-			int limit = Math.min(f, l);
-			if (a[i] < limit) {
-				count = count + (limit - a[i]);
-			}
-		}
-		System.out.println(count);
-	}
-
-	private static int max(int[] a, int s, int e) {
-		int max = 0;
-		for (int i = s; i < e; i++) {
-			if (a[i] > max)
-				max = a[i];
-		}
-		return max;
 	}
 
 }

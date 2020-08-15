@@ -5,8 +5,30 @@ import java.util.Arrays;
 public class PythogoreanTriplet {
 
 	public static void main(String[] args) {
-
+		/*
+		 * Given an array of integers, write a function that returns 
+		 * true if there is a triplet (a, b, c) that satisfies a2 + b2 = c2.
+		 */
+		/*
+			Input:
+			1
+			5
+			3 2 4 6 5
+			Output:
+			Yes
+		 */
 		int arr[] = { 3, 2, 4, 6, 5 };
+		/*
+		 * have a new array and put squares of a and sort it
+		 * loop i from n-1 to 0
+		 * 		initialize j as 0 and k as i - 1
+		 * 		loop while j < k
+		 * 			if square of jth and square of kth == sqaure of ith
+		 * 				return true
+		 * 			if > k--
+		 * 			else j++
+		 * return false
+		 */
 		boolean res = pyth(arr, arr.length);
 		System.out.println(res);
 	}

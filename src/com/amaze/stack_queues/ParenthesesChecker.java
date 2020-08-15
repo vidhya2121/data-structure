@@ -10,7 +10,31 @@ public class ParenthesesChecker {
 
 		check(str);
 	}
-
+	
+	/*
+	 * Input:
+			3
+			{([])}
+			()
+			([]
+			
+		Output:
+			balanced
+			balanced
+			not balanced
+	 */
+	/*
+	 * initialize a stack
+	 * for each char in string
+	 * 		if char equals open brackets push it
+	 * 		else
+	 * 			if stack empty then not balanced
+	 * 			pop from stack
+	 * 			if curr char equals } then poped not equals { then not balanced
+	 * 			same for else if's
+	 * if stack not empty then not balanced
+	 * balanced
+	 */
 	private static void check(String str) {
 		Stack<String> stack = new Stack<String>();
 

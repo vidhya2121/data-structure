@@ -46,7 +46,25 @@ public class AddNumberRepByLL {
 		}
 	}
 }
-
+/*
+ * Input:
+	N = 2
+	valueN[] = {4,5}
+	M = 3
+	valueM[] = {3,4,5}
+	Output: 3 9 0  
+ */
+/*
+ * reverse both list
+ * have sum and carry
+ * while first or second not null
+ * 		sum = first+second+carry
+ * 		carry=sum/10
+ * 		sum=sum%10
+ * 		add sum to newList
+ * if carry!=0 add carry to the list
+ * return reversed result
+ */
 class Add {
 	static Node addLists(Node first, Node second) {
 		Node revFirst = reverseList(first);
@@ -56,7 +74,7 @@ class Add {
 		int sum = 0;
 		int carry = 0;
 		while (revFirst != null || revSecond != null) {
-			sum = (revFirst==null?0:revFirst.data) + (revSecond==null?0:revSecond.data) + carry;
+			sum = (revFirst == null ? 0 : revFirst.data) + (revSecond == null ? 0 : revSecond.data) + carry;
 			carry = sum / 10;
 			sum = sum % 10;
 			Node sumNode = new Node(sum);
@@ -67,10 +85,10 @@ class Add {
 				res.next = sumNode;
 				res = res.next;
 			}
-			revFirst = revFirst!=null?revFirst.next:null;
-			revSecond = revSecond!=null?revSecond.next:null;
+			revFirst = revFirst != null ? revFirst.next : null;
+			revSecond = revSecond != null ? revSecond.next : null;
 		}
-		if (carry!=0) {
+		if (carry != 0) {
 			res.next = new Node(carry);
 		}
 		return reverseList(reHead);

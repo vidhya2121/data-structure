@@ -34,7 +34,26 @@ public class PairwiseSwap {
 		}
 	}
 }
-
+/*
+ * Input:
+		1
+		8
+		1 2 2 4 5 6 7 8
+		
+	Output:
+		2 1 4 2 6 5 8 7
+ */
+/*function pairswap
+ * have curr prev next
+ * loop 0 to 2 and curr!=null
+ * 		next = curr.next
+ * 		curr.next = prev
+ * 		prev = curr
+ * 		curr = neat
+ * 	if curr != null
+ * 		head.next = pairswap(next)
+ * return prev 
+ */
 class Sol {
 	// Function to pairwise swap elements of a linked list.
 	// It should returns head of the modified list

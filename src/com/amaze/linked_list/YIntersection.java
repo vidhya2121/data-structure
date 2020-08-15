@@ -82,7 +82,21 @@ class YIntersection {
 	}
 }
 
-// This is method only submission. You only need to complete the method. */
+/*
+ * Given two singly linked lists of size N and M, write a program to get the point where two linked lists intersect each other.
+ */
+/*
+   Input:
+	LinkList1 = {10,20,5,10}
+	LinkList2 = {30,40,50,5,10}
+   Output: 5
+ */
+
+/*
+ * get count of both list
+ * traverse larger list to length1 - length2
+ * loop till both list not null and do next for both and if both nodes are same break
+ */
 class Intersect {
 	int intersectPoint(Node headA, Node headB) {
 		int c1 = getCount(headA);

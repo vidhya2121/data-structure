@@ -6,8 +6,32 @@ import java.util.List;
 public class Leaders {
 
 	public static void main(String[] args) {
-
+		/*
+		 * Given an array of positive integers. Your task is to find the leaders in the array.
+			Note: An element of array is leader if it is greater than or equal to all 
+			the elements to its right side. Also, the rightmost element is always a leader. 
+		 */
+		/*
+		 * Input:
+				3
+				6
+				16 17 4 3 5 2
+				5
+				1 2 3 4 0
+				5
+				7 4 5 7 3
+			Output:
+				17 5 2
+				4 0
+				7 7 3
+		 */
 		int arr[] = { 16, 17, 4, 3, 5, 2 };
+		/*
+		 *  initialize max to 0, initialize ArrayList and a StringBuidler
+		 *  loop from n-1 to 0
+		 *  	if current element > max change max to current and add to array list
+		 *  use stringbuilder and print array in reverse order
+		 */
 		optLeaders(arr);
 	}
 
@@ -26,24 +50,6 @@ public class Leaders {
 			str.append(res.get(i)+ " ");
 		}
 		System.out.println(str);
-	}
-
-	public static int max(int arr[], int start, int end) {
-		int max = 0;
-		for (int i = start; i < end; i++) {
-			if (arr[i] > max)
-				max = arr[i];
-		}
-		return max;
-	}
-
-	public static void leaders(int a[]) {
-		for (int i = 0; i < a.length; i++) {
-			int max = max(a, i + 1, a.length);
-			if (a[i] >= max)
-				System.out.print(a[i] + " ");
-		}
-		System.out.println();
 	}
 
 }

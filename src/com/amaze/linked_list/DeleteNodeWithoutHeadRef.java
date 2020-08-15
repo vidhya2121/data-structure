@@ -65,16 +65,22 @@ public class DeleteNodeWithoutHeadRef {
 		}
 	}
 }
-
-// } Driver Code Ends
-
 /*
- * class Node { int data ; Node next; Node(int d) { data = d; next = null; } }
+ * Input:
+	N = 4
+	value[] = {10,20,4,30}
+	node = 20
+	Output: 10 4 30
  */
-
 // This function should delete node from linked list. The function
 // may assume that node exists in linked list and is not last node
 // node: reference to the node which is to be deleted
+/*
+ * just get the node to be deleted and swap with next node
+ * set del as node swap as node.next
+ * swap swap.data and del.data
+ * set del.next as swap.next
+ */
 class Del {
 	void deleteNode(Node node) {
 		// Your code here

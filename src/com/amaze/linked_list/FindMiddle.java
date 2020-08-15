@@ -43,6 +43,26 @@ class FindMiddle {
 	}
 }
 
+/*
+ * Input:
+	2
+	5
+	1 2 3 4 5
+	6
+	2 4 6 7 5 1
+	
+	Output:
+	3
+	7
+ */
+/*
+ *  set slow and fast as head
+ *  loop till fast.next and fast.next.next is not null
+ *  	slow -> slow.next
+ *  	fast -> fast.next.next
+ *  (fast.next will be not null if it is even length)
+ *  if fast.next is not null slow -> slow.next
+ */
 class Solution {
 	int getMiddle(Node head) {
 		Node slow = head;

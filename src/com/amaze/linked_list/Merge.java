@@ -50,23 +50,32 @@ class Merge {
 		}
 	}
 }
-// } Driver Code Ends
 
 /*
- * Merge two linked lists head pointer input could be NULL as well for empty
- * list Node is defined as class Node { int data; Node next; Node(int d) {data =
- * d; next = null; } }
+ * Input:
+	N = 4, M = 3 
+	valueN[] = {5,10,15,40}
+	valueM[] = {2,3,20}
+	Output: 2 3 5 10 15 20 40
+ *//*
+ *	Without using temp node
+ *	have A as such, and for very B check value with A and insert into A
+ *	First do for head
+ *	have currA = headA and nextA as headA.next
+ *	loop till currA nextA and headB no null
+ *		if headB.data is btw currA and nextA data. insert
  */
-
 class LinkedList {
 	Node sortedMerge(Node headA, Node headB) {
-		if(headA==null)return headB;
-		if(headB==null)return headA;
-		if(headB.data<headA.data) {
+		if (headA == null)
+			return headB;
+		if (headB == null)
+			return headA;
+		if (headB.data < headA.data) {
 			Node newnode = new Node(headB.data);
 			newnode.next = headA;
 			headA = newnode;
-			headB=headB.next;
+			headB = headB.next;
 		}
 		Node currA = headA;
 		Node nextA = headA.next;
@@ -82,11 +91,56 @@ class LinkedList {
 				currA = currA.next;
 				nextA = nextA.next;
 			}
-			
+
 		}
-		if(headB!=null) currA.next = headB;
+		if (headB != null)
+			currA.next = headB;
 		return headA;
 		// This is a "method-only" submission.
 		// You only need to complete this method
 	}
 }
+
+/*
+ * using dummy node. set dummy as new Node(0)
+ * initialize tail as dummy
+ * while true
+ * 		if headA is null tail.next is headB and vice versa
+ * 		if headA.data < headB.data 
+ * 			tail.next = headA and do headA = headA.next
+ * 		similar for else
+ * 		tail->tail.next
+ * return dummy.next
+ */
+
+/*Node sortedMerge(Node headA, Node headB) 
+{ 
+    Node dummyNode = new Node(0); 
+    
+    Node tail = dummyNode; 
+    while(true)  
+    { 
+        if(headA == null) 
+        { 
+            tail.next = headB; 
+            break; 
+        } 
+        if(headB == null) 
+        { 
+            tail.next = headA; 
+            break; 
+        } 
+        if(headA.data <= headB.data) 
+        { 
+            tail.next = headA; 
+            headA = headA.next; 
+        }  
+        else
+        { 
+            tail.next = headB; 
+            headB = headB.next; 
+        } 
+        tail = tail.next; 
+    } 
+    return dummyNode.next; 
+} */

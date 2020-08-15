@@ -37,7 +37,21 @@ public class Segregate012 {
 	}
 
 }
-
+/*
+ * Input:
+	N = 8
+	value[] = {1,2,2,1,2,0,2,2}
+	Output: 0 1 1 2 2 2 2 2
+ */
+/*
+ *  have nodes zero one two and also heads of all
+ *  loop head != null
+ *  	if head.data is zero
+ *  		add to zero node and do changes to zeroHead if first entry
+ *  	same for 1 and 2 also
+ *  	head = head.next
+ *  add all nodes like zero.head=one.head=two.head but with null check
+ */
 class Seg {
 	static Node segregate(Node head) {
 		Node zero = null;

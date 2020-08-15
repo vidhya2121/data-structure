@@ -38,9 +38,23 @@ class Reverse {
 	}
 }
 
+/*
+ * Input:
+		N = 6
+		value[] = {1,2,3,4,5,6}
+	Output: 6 5 4 3 2 1
+		Explanation: After reversing the list, 
+		elements are 6->5->4->3->2->1.
+ */
+/*
+ * prev=null curr=head next=null
+ * loop till curr != null
+ * 		next = curr.next
+ * 		curr.next = prev
+ * 		prev = curr
+ *		curr = next
+ */
 class ReverseLL {
-	// This function should reverse linked list and return
-	// head of the modified linked list.
 	Node reverseList(Node head) {
 		Node curr = head;
 		Node prev = null;
@@ -52,6 +66,5 @@ class ReverseLL {
 			curr = next;
 		}
 		return prev;
-		// code here
 	}
 }

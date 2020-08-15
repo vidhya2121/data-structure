@@ -65,7 +65,19 @@ class Palindrome {
  * 
  * Node(int d) { data = d; next = null; } }
  */
-
+/*
+ * Input:
+	N = 3
+	value[] = {1,2,1}
+	Output: 1
+ */
+/*
+ * slow and fast find middle and also note prev -> slow's prev
+ * head2 = reverse(slow)
+ * loop head2!=null && head!=prev.next
+ * 		if two data not equal return false
+ * return true
+ */
 class PalindromeSol {
 	// Function to check if linked list is palindrome
 	boolean isPalindrome(Node head) {

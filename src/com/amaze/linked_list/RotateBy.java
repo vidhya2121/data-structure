@@ -39,10 +39,26 @@ class RotateBy {
 	}
 }
 
+/*
+ * Input:
+	N = 8
+	value[] = {1,2,3,4,5,6,7,8}
+	k = 4
+	Output: 5 6 7 8 1 2 3 4
+ */
 class Rotate {
 	// This function should rotate list counter-
 	// clockwise by k and return head node
-
+	/*
+	 * iterate k times 
+	 * 		store the k-1 th node also temp -> temp.next
+	 * set secondHead ad temp
+	 * loop till temp is not null && temp.next is not null 
+	 * 		temp -> temp.next
+	 * if temp != null
+	 * 		make temp.next as firsthead
+	 *      k-1 th temp.next = null
+	 */
 	public Node rotate(Node head, int k) {
 		Node firstHead = head;
 		Node temp = head;

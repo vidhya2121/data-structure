@@ -55,11 +55,20 @@ public class NthFromEnd {
 		}
 	}
 }
-
+/*
+ * Input:
+	L = 9, N = 2
+	value[] = {1,2,3,4,5,6,7,8,9}
+	Output: 8
+ */
+/*
+ * have slow and fast
+ * move fast n times
+ * loop till fast!=null
+ * 		slow->slow.next fast->fast.next
+ * return slow.data
+ */
 class Nth {
-	// Function to find the nth node from end in the linked list
-	// head: head of the linked list
-	// n: nth node from end to find
 	int getNthFromLast(Node head, int n) {
 		Node slow = head;
 		Node fast = head;
