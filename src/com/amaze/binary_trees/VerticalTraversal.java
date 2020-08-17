@@ -90,16 +90,25 @@ public class VerticalTraversal {
 		}
 	}
 }
-// } Driver Code Ends
-
-// User function Template for Java
-
 /*
- * class Node { int data; Node left, right;
- * 
- * Node(int key) { data = key; left = right = null; } }
+ * Input:
+       1
+    /    \
+   2      3
+ /   \      \
+4     5      6
+Output: 4 2 1 5 3 6
  */
-
+/*
+ * have a treemap<int,list> \ arraylist for result
+ * call printVerticalHelper(root, 0, map)
+ * helper
+ * 		if root is null return
+ * 		addtomap(root.data, d, map)
+ * 		printVerticalHelper(root.left, d-1, map)
+ * 		printVerticalHelper(root.right, d+1, map)
+ * addtomap -> this will add an array for every d
+ */
 class BinaryTree {
 
 	static ArrayList<Integer> verticalOrder(Node root) {

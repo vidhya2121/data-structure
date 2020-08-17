@@ -14,7 +14,30 @@ public class LongestDistinct {
 			System.out.println(s);
 		}
 	}
-
+/*
+ * Input:
+	2
+	abababcdefababcdab
+	geeksforgeeks
+	
+	Output:
+	6
+	7
+ */
+	/*
+	 * initialize count as 1 and max as count
+	 * temp String as char at 0
+	 * loop i 1 to length
+	 * 		if char at i not found in temp string
+	 * 			count++
+	 * 			add char to temp string
+	 * 		else
+	 * 			count = 0
+	 * 			temp string = substring(index(char at i) + 1, length)
+	 * 			count = ss.length
+	 * 		count = max(count,max)
+	 * return max
+	 */
 	private static int longDist(String s1) {
 		int count = 1;
 		int max = count;

@@ -119,8 +119,29 @@ public class Tree2DLL {
  * }
  */
 
-// This function should return head to the DLL
-
+/*
+ * Given a Binary Tree (BT), convert it to a Doubly Linked List(DLL) In-Place. 
+ * The left and right pointers in nodes are to be used as previous and next pointers respectively in converted DLL. 
+ * The order of nodes in DLL must be same as Inorder of the given Binary Tree. 
+ * The first node of Inorder traversal (leftmost node in BT) must be the head node of the DLL.
+ */
+/*
+ * have head of DLL as class member = null 
+ * have a prev also as class member = null
+ * treeToDLL
+ * 		call inorder(root)
+ * 		return head
+ * inorder
+ * 		if root null return
+ * 		inorder(root.left)
+ * 		if prev not null
+ * 			root.left = prev
+ * 			prev.right = root
+ * 		else head = root
+ * 		prev = root
+ * 		inorder(root.right)
+ * 		
+ */
 class GfG {
 	Node prev = null;
 	Node head = null;

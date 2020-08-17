@@ -96,15 +96,21 @@ public class CheckBST {
 
 }
 
-// } Driver Code Ends
-
-// User function Template for Java
-
 /*
- * Structure of Node: class Node{ int data; Node left; Node right; Node(int
- * data){ this.data = data; left=null; right=null; } }
+ * Input:
+    2
+ /    \
+1      3
+Output: 1
  */
-
+/*
+ * isBST(root)
+ * 		bstutil(root,min,max)
+ * isbstutil
+ * 		if root is null return true
+ * 		if root.data < min or > max return false
+ * 		isbstutil(root.left,min,root.data-1) && isbstutil(root.right,root.data+1,max)
+ */
 class Tree2 {
 	// return true if the given tree is a BST, else return false
 	boolean isBST(Node root) {

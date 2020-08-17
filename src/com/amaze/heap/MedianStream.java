@@ -4,9 +4,40 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
-
+/*
+ * Given an input stream of N integers. The task is to insert these numbers 
+ * into a new stream and find the median of the stream formed by each insertion of X to the new stream.
+ */
+/*
+ * Input:
+		4
+		5
+		15
+		1 
+		3
+	Output:
+		5
+		10
+		5
+		4
+ */
+/*
+ * 
+ */
 public class MedianStream {
-
+/*
+ * have minheap and maxheap
+ * loop 0 to n
+ * 		get element from scanner
+ * 		add element to maxheap
+ * 		remove first from maxheap and add it to minheap
+ * 		if maxheap size is less thn minheap size
+ * 			remove first from minheap and add to maxheap
+ * 		if both heaps are equal in size
+ * 			sysout add both peek /2
+ * 		else 	
+ * 			sysout peek of maxheap
+ */
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
@@ -28,5 +59,4 @@ public class MedianStream {
 			}
 		}
 	}
-
 }

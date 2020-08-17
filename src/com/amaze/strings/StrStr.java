@@ -20,14 +20,22 @@ public class StrStr {
 		}
 	}
 }// } Driver Code Ends
-
 /*
- * the function returns the position where the target string matches the string
- * str
- * 
- * Your are required to complete this method
+ * Your task is to implement the function strstr. The function takes two strings as arguments (s,x) 
+ * and  locates the occurrence of the string x in the string s.
+ *  The function returns and integer denoting the first occurrence of the string x in s (0 based indexing).
  */
-
+/*
+ * Input:
+		s = GeeksForGeeks, x = For
+	Output: 5
+		Explanation: For is present as substring
+		in GeeksForGeeks from index 5 (0 based
+		indexing).
+ */
+/*
+ * return str.indexOf(target)
+ */
 class GfG2 {
 	int strstr(String str, String target) {
 		// Your code here

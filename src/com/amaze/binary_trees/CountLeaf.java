@@ -90,7 +90,22 @@ public class CountLeaf {
 		}
 	}
 }
-
+/*
+ *  Given Tree is 
+                                 4
+                              /   \
+                            8       10
+                          /        /  \
+                       7          5    1
+                      /
+                     3
+Three leaves are 3 , 5 and 1.
+ */
+/*
+ * if node is null return 0
+ * if both node left and right is null return 1
+ * return leaf(node.left) + leaf(node.right)
+ */
 class Tree11 {
 	int countLeaves(Node node) {
 		if (node == null)

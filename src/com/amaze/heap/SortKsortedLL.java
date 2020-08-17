@@ -55,14 +55,22 @@ public class SortKsortedLL {
 }// } Driver Code Ends
 
 /*
- * class Node { int data; Node next;
- * 
- * Node(int key) { data = key; next = null; } }
+ * Input:
+K = 4
+value = {{1,2,3},{4 5},{5 6},{7,8}}
+Output: 1 2 3 4 5 5 6 7 8
  */
-
-// a is an array of Nodes of the heads of linked lists
-// and N is size of array a
-
+/*
+ * write comparator for node class and set a pq for this
+ * have head and tail as null
+ * loop 0  to no of linkedlist
+ * 		add each ll head to pq
+ * loop pq not empty
+ * 		temp = poll from pq
+ * 		if temp.next is not null add temp.next to pq
+ * 		if head is null set both head and tail to temp
+ * 			else tail.next = temp; tail = temp
+ */
 class Merge {
 
 	public Node mergeKList(Node[] a, int n) {

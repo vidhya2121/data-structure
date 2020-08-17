@@ -21,7 +21,32 @@ public class LongestPrefix {
 			t--;
 		}
 	}
-
+	/*
+	 * Input:
+			2
+			4
+			geeksforgeeks geeks geek geezer
+			3
+			apple ape april
+			
+	Output:
+			gee
+			ap
+	 */
+/*
+ * longPrefix(String[] str)\
+ * 		if str length i 1 then return str[0].length
+ * 		first = str[0]
+ * 		loop i = 1 to length
+ * 			count = 0
+ * 			loop j = 0 j< first.lngth and j < str[i].length
+ * 				if str[i].charAt j == first.charAt j count++
+ * 				else break
+ * 		    count == 0 return -1
+ * 			min = min(min,count)
+ * return min
+ * 
+ */
 	private static int longPrefix(String[] str) {
 		if(str.length==1) {
 			return str[0].length();

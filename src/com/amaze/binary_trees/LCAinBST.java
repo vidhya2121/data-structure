@@ -107,7 +107,28 @@ public class LCAinBST {
  * structure of Node is as follows: class Node{ int data; Node left; Node right;
  * Node(int data){ this.data = data; left=null; right=null; } }
  */
-
+/*
+ * Input:
+             5
+           /   \
+         4       6
+        /         \
+       3           7
+                    \
+                     8
+n1 = 7, n2 = 8
+Output: 7
+ */
+/*
+ * LCA(root, n1, n2)
+ * 		root is null return root
+ * 		if root.data is between n1 and n2 r n2 and n1
+ * 			return root
+ * 		if root.data is greater than both n1 and n2
+ * 			return LCA(root.left,n1,n2)
+ * 		else
+ * 			return LCA(root.right,n1,n2)
+ */
 class BST {
 	// Returns the LCA of the nodes with values n1 and n2
 	// in the BST rooted at 'root'

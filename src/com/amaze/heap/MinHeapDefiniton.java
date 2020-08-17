@@ -32,9 +32,75 @@ public class MinHeapDefiniton {
 		}
 	}
 }
-// } Driver Code Ends
+/*
+ * You are given an empty Binary Min Heap and some queries and your task is to implement the three methods insertKey,  deleteKey,  and extractMin on the Binary Min Heap and call them as per the query given below:
+1) 1  x  (a query of this type means to insert an element in the min-heap with value x )
+2) 2  x  (a query of this type means to remove an element at position x from the min-heap)
+3) 3  (a query like this removes the min element from the min-heap and prints it ).
 
-// User function Template for Java
+Example 1:
+
+Input:
+Q = 7
+Queries = 1 4 1 2 3 1 6 2 0 3 3
+Output: 2 6 - 1
+Explanation: In the first test case for
+query 
+1 4 the heap will have  {4}  
+1 2 the heap will be {2 4}
+3   removes min element from heap ie
+    2 and prints it now heap is {4} 
+1 6 inserts 6 to heap now heap is {4 6}
+2 0 delete element at position 0 of the
+    heap,now heap is {6}
+3   remove min element from heap ie 6
+    and prints it  now the heap is empty
+3   since the heap is empty thus no min
+    element exist so -1 is printed.
+ */
+/*
+ * class member variables harr[] capacity size
+ parent
+ * 		return (i-1)/2
+ left
+ * 		return 2*i + 1
+ right 
+ * 		return 2*i + 2
+ delete(index)
+ * 		if index >= sizr then return;
+ * 		decreaseKey(index, MIN)
+ * 		extractMin()
+ decreaseKey(index, val) // usage, when we need to delete element in given index then set element of that index as MIN 
+ * 							//	and iteratively bring this to first. call etractMin
+ * 		harr[index] =  val
+ * 		loop index!=0 and parent(index) element > index element 
+ * 			swap
+ * 			index = parent(index) 
+ extractMin() //remove first element and set last as first and call heapify, reduces heap size by 1
+ * 		if size = 0 return -1
+ * 		if size is 1 then size-- and return harr[0]
+ * 		min = harr[0]
+ * 		harr[0] = harr[size-1]
+ * 		size--
+ * 		heapify(0)
+ * 		return min
+ heapify(index)
+ * 		l = left(index) r = right(index)
+ * 		if l < size and lth element < indexth element
+ * 			smallest = l
+ * 		if r < size and rth element < smallestth element
+ * 			smallest = r
+ * 		if index!= smallest swap
+ * 		heapify(smallest)
+ insert
+ 		if size reached return
+ 		harr[size] = key
+ 		i = size
+ 		size--
+ 		loop i!=0 and harr[parent(i)] > harr[i]
+ 			swap
+ 			i = parent(i)
+ */
 class MinHeap {
 	int[] harr;
 	int capacity;

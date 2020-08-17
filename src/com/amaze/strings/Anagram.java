@@ -18,6 +18,14 @@ public class Anagram {
 			// System.out.println(anagram(s1, s2));
 		}
 	}
+	/*
+	 * both length not equal return NO
+	 * init a count array of length 256 and fill with 0
+	 * loop from 0 to length
+	 * 		count[str1.charAt(i)]++
+	 * 		count[str2.charAt(i)]--
+	 * therefore if array contains any non zero it is not anagram
+	 */
 
 	private static String areAnagram(String s1, String s2) {
 		if (s1.length() != s2.length())

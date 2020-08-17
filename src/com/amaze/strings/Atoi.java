@@ -1,7 +1,20 @@
 package com.amaze.strings;
 
 import java.util.Scanner;
-
+/*
+ * Your task  is to implement the function atoi. 
+ * The function takes a string(str) as argument and converts it to an integer and returns it.
+ */
+/*
+ * Input:
+		2
+		123
+		21a
+		
+	Output:
+		123
+		-1
+ */
 public class Atoi {
 
 	public static void main(String args[]) {
@@ -16,9 +29,17 @@ public class Atoi {
 			t--;
 		}
 	}
-}// } Driver Code Ends
-
-/* You are required to complete this method */
+}
+/*
+ * initialize sign as 1 i as 0
+ * if first char in str is - then update sign as -1 and i++
+ * initialize ans as 0
+ * loop for i < length
+ * 		if char at i not a number return -1
+ * 		if a number then ans = ans * 10 + (char at i - '0')
+ * 		i++
+ * return sign*ans
+ */
 class GfG {
 	int atoi(String str) {
 		// int ans = 0;

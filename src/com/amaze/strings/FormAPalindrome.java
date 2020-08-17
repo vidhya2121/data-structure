@@ -14,7 +14,25 @@ public class FormAPalindrome {
 			System.out.println(s);
 		}
 	}
-
+/*
+ * Given a string, find the minimum number of characters to be inserted to convert it to palindrome.
+For Example:
+ab: Number of insertions required is 1. bab or aba
+aa: Number of insertions required is 0. aa
+abcd: Number of insertions required is 3. dcbabcd
+ */
+	/*
+	 * input as charArray l = 0 and r=s1.length()-1
+	 * if l > r
+	 * 		return MAX
+	 * if l == r return 0
+	 * if l == r - 1
+	 * 		if both l and r element equal return 0 else return 1
+	 *if both l and r element equal
+	 *		return fun(cs, l+1, r+1)
+	 *else
+	 *		return min(fun(cs,l,r-1),fun(cs,l+1.r)) + 1
+	 */
 	private static int formPalindrome(char[] cs, int l, int r) {
 		if (l > r)
 			return Integer.MAX_VALUE;

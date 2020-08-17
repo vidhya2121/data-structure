@@ -129,15 +129,39 @@ public class Connect {
 
 }
 
-// } Driver Code Ends
-
-// User function Template for Java
-
+/*
+ * used nextRight eithin node object
+ * 
+ */
 class CTree {
 	/*
 	 * Node class is Defined as follows: class Node{ int data; Node left; Node
 	 * right; Node nextRight; Node(int data){ this.data = data; left=null;
 	 * right=null; nextRight = null; } }
+	 */
+	/*
+	 * Given a binary tree, connect the nodes that are at same level. You'll be given an addition nextRight pointer for the same.
+
+Initially, all the nextRight pointers point to garbage values. 
+Your function should set these pointers to point next right for each node.
+       10                       10 ------> NULL
+      / \                 /      \
+     3   5       =>     3 ------> 5 --------> NULL
+    / \     \          /  \        \
+   4   1   2          4 --> 1 -----> 2 -------> NULL
+	 */
+	
+	/*
+	 * have a queue
+	 * add root to q then add null, adding null is used as line ending
+	 * loop q not empty
+	 * 		t = q.remove
+	 * 		if t not null
+	 * 			t.nextRight = q.peek
+	 * 			if t.left not null add to q
+	 * 			if t.right not null add to q
+	 * 		else \	
+	 * 			if q not empty add null to q	
 	 */
 	public static void connect(CNode p) {
 		// code here.

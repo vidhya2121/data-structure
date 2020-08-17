@@ -100,15 +100,22 @@ public class Identical {
 // User function Template for Java
 
 /*
- * 
- * class Node{ int data; Node left,right; Node(int d){ data=d; left=right=null;
- * } }
- * 
+ Input:
+    1       1
+  /  \     /  \
+ 2    3   3    2
+Output: No
+Explanation: There are two trees both
+having 3 nodes and 2 edges, but both
+trees are not identical.
  */
 /*
- * Should return true if trees with roots as root1 and root2 are identical
+ * two trees root1 root2
+ * both root null return true
+ * any one root null return false
+ * root1.data!=root2.data	return false
+ * return iden(root1.left,root2.left)&&iden(root1.right,root2.right)
  */
-
 class Tree7 {
 	boolean isIdentical(Node root1, Node root2) {
 

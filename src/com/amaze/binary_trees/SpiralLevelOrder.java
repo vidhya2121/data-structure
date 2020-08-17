@@ -89,16 +89,33 @@ public class SpiralLevelOrder {
 	}
 }
 
-// } Driver Code Ends
-
-// User function Template for Java
-
 /*
- * // A Binary Tree node class Node { int data; Node left, right;
- * 
- * Node(int item) { data = item; left = right = null; } }
+ * Input:
+           10
+         /     \
+        20     30
+      /    \
+    40     60
+Output: 10 20 30 60 40 
  */
-
+/*
+ * height
+ * 		if root is null return 0
+ * 		leftHeight = height(root.left) rightHeight=height(root.right)
+ *      return max of these + 1
+ * oneLevel(root, level, tmpArrayList)
+ * 		if root is null return
+ * 		if level is 1 then add data to tempArrayList
+ * 		else 
+ * 			oneLevel(root.left, level - 1, tempArrayList);
+			oneLevel(root.right, level - 1, tempArrayList);
+ * spiral
+ * 		loop 1 to height=
+ * 			initialize tmp array list
+ * 			oneLevel(root, i, tmp)
+ * 			if i is even reverse the temp array list
+ * 			print the list
+ */
 class Spiral {
 	void printSpiral(Node node) {
 		// Your code here

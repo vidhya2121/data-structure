@@ -123,7 +123,29 @@ public class BottomView {
 // left = right = null;
 // }
 // }
+/*
+ *      			  20
+                    /    \
+                  8       22
+                /   \     /   \
+              5      3 4     25
+                     /    \      
+                 10       14
 
+For the above tree the output should be 5 10 4 14 25.
+
+ */
+/*
+ * note that node class has horizontaldist member variable
+ * queue & treemap, arraylist for result
+ * set hd of root to 1 and put root into q
+ * loop q not empty
+ * 		temp = remove from q
+ * 		map.put(temp.hd, temp.data) // this ensures like it replaces the node having same hd
+ * 		if temp.left is not null, set its hd as temp.hd+1 and add to q
+ * 		similar for right
+ * 
+ */
 class Tree3 {
 
 	// Method that returns the bottom view.

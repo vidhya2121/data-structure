@@ -3,7 +3,24 @@ package com.amaze.strings;
 import java.util.Scanner;
 
 public class RemoveDuplicates {
-
+/*
+ * Example:
+	Input:
+	2
+	geeksforgeeks
+	geeks for geeks
+	
+	Output:
+	geksfor
+	geks for
+ */
+	/*
+	 * res = ""
+	 * loop 0 to length
+	 * 		if res not contains substring of str(i,i+1) => that char not present in str
+	 * 			add char at i to res
+	 * return res
+	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();

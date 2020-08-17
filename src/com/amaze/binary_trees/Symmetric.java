@@ -94,7 +94,23 @@ public class Symmetric {
 		}
 	}
 }
+/*
+ *            100
+            /     \
+          10       10
+         /   \    /   \
+       20     20 20    20
+ */
 
+/*
+ * if root null return true
+ * callUtil(riit.left, root.right)
+ * util
+ * 		both left and right null return true
+ * 		either null return false
+ * 		left.data!=right.data return false
+ * 		util(left.left,right.right)&&(left.right,right.left)
+ */
 class Tree9 {
 	// return true/false denoting whether the tree is Symmetric or not
 	public static boolean isSymmetric(Node root) {

@@ -89,14 +89,38 @@ public class MaxPathSum {
 		}
 	}
 }
-// } Driver Code Ends
-
-// User function Template for Java
-
 /*
- * class Node { int data; Node left, right;
+ * Given a binary tree in which each node element contains a number. Find the maximum possible sum from one leaf node to another.
+ */
+/*
+ * Input:
+		2
+		3 4 5 -10 4
+		-15 5 6 -8 1 3 9 2 -3 N N N N N 0 N N N N 4 -1 N N 10 N
+		
+	Output:
+		16
+		27
+ */
+/*
+ * have sum as class variable and initialize it to MIN
+ * maxPathSum
+ * 		if root is null return 0
+ * 		call maxUtil
+ * 		return sum
+ * maxUtil
+ * 		if root is null return 0
+ * 		if both left and right of root is null return root.data
+ * 		ls = maxUtil(root.left)
+ * 		rs = maxUtil(root.right)
+ * 		if both left and right of root is not null
+ * 			sum = max(sum, ls+rs+root.data)
+ * 			return max(ls,rs) + root.data
+ * 			if root.left is not null
+ * 				return ls + root.data
+ * 			if root.right is not null
+ * 				return rs + root.data
  * 
- * Node(int item) { data = item; left = right = null; } }
  */
 class Tree88 {
 	int sum = Integer.MIN_VALUE;

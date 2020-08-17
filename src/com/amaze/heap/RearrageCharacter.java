@@ -4,7 +4,39 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class RearrageCharacter {
-
+/*Given a string S with repeated characters (only lowercase).
+ *  The task is to rearrange characters in a string such that no two adjacent characters are same.
+ * 
+ */
+	/*
+	 * Input:
+			3
+			geeksforgeeks
+			bbbabaaacd
+			bbbbb
+			
+		Output:
+			1
+			1
+			0
+	 */
+	/*
+	 * Object Freq (int freq, char ch) and write reverse comparator for freq (1,-1,0)
+	 * initialize pq of freq obj with freq comparator
+	 * initialize count array of lenghth 26
+	 * loop and populate count array count[input.charAt(i) - 'a]++
+	 * loop a to z
+	 * 		if count[ch - 'a'] > 0
+	 * 			add to pq
+	 * initialize prev as Freq(-1, "#") //use as a delimiter
+	 * loop pq not empty
+	 * 		curr = poll from pq
+	 * 		add curr.ch to result
+	 * 		if prev.freq > 0
+	 * 			add prev to q
+	 * 		curr.freq--
+	 * 		prev=curr
+	 */
 	public static void main(String[] args) {
 		
 		String ques = "geeksforgeeks";

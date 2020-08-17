@@ -91,13 +91,36 @@ public class SerializeDeserialize {
 			System.out.println();
 		}
 	}
-}// } Driver Code Ends
-
+}
 /*
- * Complete the given function Node is as follows: class Tree{ int data; Tree
- * left,right; Tree(int d){ data=d; left=right=null; } }
+ * Serialization is to store a tree in an array so that it can be later restored and
+ *  Deserialization is reading tree back from the array.
+ *   Now your task is to complete the function serialize which stores the tree into an array A[ ] 
+ *   and deSerialize which deserializes the array to tree and returns it.
+Note: The structure of tree must be maintained.
  */
-// This Code is developed by: Suman Rana
+/*
+ * Input:
+         10
+       /    \
+      20    30
+    /   \
+   40  60
+Output: 40 20 60 10 30
+ */
+/*
+ * serialize
+ * 		preorder traversal with array.add instead of sysout
+ * deserialize
+ * 		have index at class level
+ * 		if index == array.size return null
+ * 		val = array.get(index) index++
+ * 		if val is -1 return null
+ * 		create newnode with val
+ * 		root.left = deseialize(array)
+ * 		root.right = deserialize(array)
+ * 		return root
+ */
 class Tree33 {
 	int index = 0;
 

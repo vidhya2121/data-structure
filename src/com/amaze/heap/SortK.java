@@ -4,7 +4,20 @@ import java.util.Iterator;
 import java.util.PriorityQueue;
 
 public class SortK {
-
+/*
+ * sort almost sorted array
+ */
+	/*
+	 * pq
+	 * for i<0 to i<k+1
+	 * 		add a[i] to pq
+	 * j=0
+	 * for i from k+1 to n
+	 * 		a[j] = poll from pq
+	 * 		j++
+	 * 		add a[i] to pq
+	 * add remaining from pq to array
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int k = 3;

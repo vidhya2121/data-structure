@@ -101,18 +101,28 @@ public class PrintLeftView {
 		}
 	}
 }
-// } Driver Code Ends
-
-// User function Template for Java
 
 /*
- * A Binary Tree node class Node { int data; Node left, right;
  * 
- * Node(int item) { data = item; left = right = null; } }
+Left view of following tree is 1 2 4 8.
+
+          1
+       /     \
+     2        3
+   /     \    /    \
+  4     5   6    7
+   \
+     8   
+ */
+/*
+ * temp = root
+ * loop temp!=null
+ * 		sop temp.data
+ * 		if temp.left!=null then temp = temp.left
+ * 		else temp = temp.right
  */
 class Tree {
 	void leftView(Node root) {
-		// Your code here
 		Node temp = root;
 
 		while (temp != null) {

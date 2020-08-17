@@ -90,7 +90,12 @@ public class Height {
 		}
 	}
 }
-
+/*
+ *  * height
+ * 		if root is null return 0
+ * 		leftHeight = height(root.left) rightHeight=height(root.right)
+ *      return max of these + 1
+ */
 class Tree10 {
 	int height(Node root) {
 		if (root == null)

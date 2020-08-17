@@ -4,7 +4,21 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Scanner;
+/*
+ * Given an input stream of n integers, find the kth largest element for each element in the stream.
+ */
+/*
+ * Input:
+2
+4 6
+1 2 3 4 5 6
+1 2
+3 4
 
+Output:
+-1 -1 -1 1 2 3
+3 4 
+ */
 public class KthLargest {
 
 	public static void main(String[] args) {
@@ -20,7 +34,18 @@ public class KthLargest {
 
 		kthMax(k, n, a);
 	}
-
+/*
+ * initialize pq and i =0
+ * loop till i < k-1
+ * 		add a[i] to pq
+ * 		sysout -1
+ * add a[i] to pq
+ * sysout pq.peek
+ * loop i from k to n
+ * 		if a[i] > pq.peek()
+ * 			poll from pq and add a[i] to pq
+ * 		sysout pq.peek
+ */
 	private static void kthMax(int k, int n, int[] a) {
 		PriorityQueue<Integer> min = new PriorityQueue<>();
 		int i = 0;
