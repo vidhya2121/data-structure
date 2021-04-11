@@ -19,7 +19,6 @@ public class InplaceMXMTranspose {
 	}
 
 	private static void inPlace(int[][] m) {
-		// TODO Auto-generated method stub
 		int r = m.length;
 		int c = m[0].length;
 		for (int i = 0; i < r; i++) {

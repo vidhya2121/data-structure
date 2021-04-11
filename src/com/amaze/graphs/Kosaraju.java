@@ -35,13 +35,10 @@ public class Kosaraju {
 		}
 	}
 }
-// } Driver Code Ends
-
-// User function Template for Java
-
-// adj : Adjacency list representing the graph
-// N: No of vertices
-
+/*
+ * Given a graph with N nodes and M directed edges. Your task is to complete the function kosaraju() 
+ * which returns an integer denoting the number of strongly connected components in the graph.
+ */
 class Solution {
 	public int kosaraju(ArrayList<ArrayList<Integer>> adj, int N) {
 		Stack<Integer> stack = new Stack<>();
@@ -64,7 +61,6 @@ class Solution {
 			}
 		}
 		return count;
-		// Write your code here
 
 	}
 

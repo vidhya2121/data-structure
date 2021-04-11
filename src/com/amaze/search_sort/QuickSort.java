@@ -9,6 +9,28 @@ public class QuickSort {
 		quickSort(a, 0, a.length - 1);
 		System.out.println(Arrays.toString(a));
 	}
+	/*
+	 * call quickSort(a,0,a.length-1)
+	 * 
+	 * quickSort(a, l, r)
+	 * 		index = partition(a, l, r)
+	 * 		if l < index - 1
+	 * 			quickSort(a, l, index - 1)
+	 * 		if r > index
+	 * 			quickSort(a, index, r)
+	 * 
+	 * partition(a, l, r)
+	 * 		pivot = a[(l+r)/2]
+	 * 		loop l<=r
+	 * 			loop a[l] < pivot
+	 * 				l++
+	 * 			looop a[r] > pivot
+	 * 				r++
+	 * 			if l <= r
+	 * 				swap a[l] and a[r]
+	 * 				l++  r--
+	 * 		return l
+	 */
 
 	private static void quickSort(int[] a, int l, int r) {
 		int index = partition(a, l, r);

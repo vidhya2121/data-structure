@@ -8,9 +8,6 @@ import java.util.Scanner;
 
 public class BFS {
 
-	// { Driver Code Starts
-	// Initial Template for Java
-
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
@@ -34,12 +31,16 @@ public class BFS {
 		}
 	}
 }
-// } Driver Code Ends
-
-// User function Template for Java
-
 /*
- * g[]: adj list of the graph N : number of vertices
+ * have a arraylist for result, visited boolea array and a queue
+ * mark visited[0] as true and add to queue
+ * while q is not empty
+ * 		curr = poll from q
+ * 		add curr to res
+ * 		iterate thro curr in list
+ * 			if visited[next] == false
+ * 				make visited as true and add next to q
+ * return res
  */
 class Traversal {
 	static ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> g, int N) {
@@ -62,6 +63,5 @@ class Traversal {
 			}
 		}
 		return res;
-		// add your code here
 	}
 }

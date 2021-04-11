@@ -9,7 +9,6 @@ public class SearchSortedRowColumn {
 	}
 
 	private static void search(int[][] mat, int size, int key) {
-		// TODO Auto-generated method stub
 		int i = 0;
 		int j = size - 1;
 		while (i < size && j >= 0) {

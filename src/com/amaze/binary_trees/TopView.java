@@ -7,7 +7,6 @@ import java.io.*;
 public class TopView {
 
 	public static void main(String[] args) throws IOException {
-		// Scanner sc=new Scanner(System.in);
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		int t = Integer.parseInt(br.readLine());
@@ -61,7 +60,6 @@ public class TopView {
 class View {
 	// function should print the topView of the binary tree
 	static void topView(Node root) {
-		// add your code
 		class HNode {
 			Node node;
 			int hd;

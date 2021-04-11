@@ -7,7 +7,39 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class FindPathFromStoD {
+/*
+ * going with naive approach
+ * Given a N X N matrix (M) filled with 1, 0, 2, 3. The task is to find whether there is a path possible from source to destination, while traversing through blank cells only. You can traverse up, down, right and left.
 
+A value of cell 1 means Source.
+A value of cell 2 means Destination.
+A value of cell 3 means Blank cell.
+A value of cell 0 means Blank Wall.
+Note: there is only single source and single destination.
+ */
+	/*
+	 * Given a matrix like
+	 * Testcase 1: The matrix for the above given input is:
+		3 0 0 0
+		0 3 3 0
+		0 1 0 3
+		0 2 3 3
+		From the matrix we can see that there exists a path from to reach destination 2 from source 1.
+	 */
+	/*
+	 *find starti startj endi endj
+	 *call dfs(mat,starti,startj,endi,endj)
+	 *dfs(a,i,j,endi,endj)
+	 *		if i's and j's out of bounds or a[i][j] < 0 
+	 *			return false 
+	 *		mark a[i][j] as -1 (hinting that it is visited)
+	 *		if i=endi and j=endj
+	 *			return
+	 *		top = dfs(a,i-1,j,endi,endj)
+	 *		if top == true return true
+	 *		do for right,bottom,left
+	 *		return false
+	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
@@ -19,7 +51,7 @@ public class FindPathFromStoD {
 					mat[i][j] = sc.nextInt();
 				}
 			}
-//			System.out.println(findPathExists(mat, n)); // 0.35
+			System.out.println(findPathExists(mat, n)); // 0.35
 			System.out.println(naive(mat, n)); // 0.35
 		}
 	}

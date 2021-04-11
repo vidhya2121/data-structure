@@ -81,29 +81,4 @@ public class PowerOf {
 		return count;
 	}
 
-//	public static int countPairsBruteForce(double X[], double Y[], int m, int n) {
-//		int ans = 0;
-//		for (int i = 0; i < m; i++) {
-//			for (int j = 0; j < n; j++) {
-//				if (Math.pow(X[i], Y[j]) > Math.pow(Y[j], X[i])) {
-//					System.out.println(X[i] + " \t" + Y[j] + " \tyes");
-//					ans++;
-//				}
-//			}
-//		}
-//		return ans;
-//	}
-//
-//	
-//
-//	private static long xeros(long[] b) {
-//		int c = 0;
-//		for (int j = 0; j < b.length; j++) {
-//			if (b[j] == 0) {
-//				c++;
-//			}
-//		}
-//		return c;
-//	}
-
 }

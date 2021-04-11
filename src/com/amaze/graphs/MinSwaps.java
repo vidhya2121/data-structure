@@ -8,7 +8,6 @@ import java.util.Comparator;
 
 public class MinSwaps {
 
-	// Driver program to test the above function
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int t = Integer.parseInt(br.readLine().trim());
@@ -22,8 +21,39 @@ public class MinSwaps {
 			System.out.println(new GfGMin().minSwaps(a, n));
 		}
 	}
-}// } Driver Code Ends
+}
+/*
+ * Given an array of integers. Find the minimum number of swaps required to sort the array in non-decreasing order.
+ */
+/*
+ * Input:
+	2
+	5
+	1 5 4 3 2
+	4
+	8 9 16 15
+	
+	Output:
+	2
+	1
 
+Explanation:
+Test Case 1: We need two swaps, swap 2 with 5 and 3 with 4 to make it sorted. 
+ */
+/*
+ * create a class with data and index as variable and write a comparator
+ * create a temp arraylist and a boolean visited array
+ * loop through input and add each element with index in temp array list and sort
+ * loop from 0 to N
+ * 		if i is visited or temp.get(i).index == i	continue
+ * 		j = i and cycle = 0
+ * 		loop j not visited
+ * 			mark j as visited
+ * 			cycle++
+ * 			j = temp.get(j).index
+ * 		if cycle > 0 add cycle - 1 to ans
+ * 		
+ */
 class Grp {
 	int data;
 	int index;

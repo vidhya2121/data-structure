@@ -5,7 +5,24 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class ShortestFromSrcDest {
-
+/*
+ * Given a boolean 2D matrix (0-based index), find whether there is path from (0,0) to (x,y) 
+ * and if there is one path, print the minimum no of steps needed to reach it, else print -1 if the destination is not reachable.
+ *  You may move in only four direction ie up, down, left and right. The path can only be created out of a cell if its value is 1.
+ */
+	/*
+	 * Input:
+		2
+		3 4
+		1 0 0 0 1 1 0 1 0 1 1 1
+		2 3
+		3 4
+		1 1 1 1 0 0 0 1 0 0 0 1
+		0 3
+		Output:
+		5
+		3
+	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
@@ -23,7 +40,25 @@ public class ShortestFromSrcDest {
 			System.out.println(shortPath(mat, n, m, x, y));
 		}
 	}
-
+/*
+ * shortPath(mat,n,m,x,y)
+ * if mat[0][0] or [x][y] not 1 then return -1
+ * create a class PNode(Point p, dist) Point(x,y)
+ * have a visited boolean array and also a Queue with PNode
+ * add point 0 0 dist 0 to q
+ * mark visited[0][0] as true
+ * loop q not empty
+ * 		curr = poll from q
+ * 		if curr x,y == x,y
+ * 			return curr.dist
+ * 		have row array as -1 0 1 0 and col array as 0 1 0 -1
+ * 		loop 4 times down, right, up, left
+ * 			r = curr x + row[i]   c = curr y + col[i]
+ * 			if r and c in bounds and not visited and mat[r][c] is 1
+ * 				make visited as 1 and add r c curr.dist+1 to q
+ * return -1 
+ * 
+ */
 	private static int shortPath(int[][] mat, int n, int m, int x, int y) {
 		if (mat[0][0] != 1 || mat[x][y] != 1) {
 			return -1;

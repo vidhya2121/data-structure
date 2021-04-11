@@ -1,6 +1,5 @@
 package com.amaze.stack_queues;
 
-// { Driver Code Starts
 import java.util.*;
 
 public class QueueUsingStacks {
@@ -27,7 +26,6 @@ public class QueueUsingStacks {
 	}
 }
 
-// } Driver Code Ends
 
 class Queues {
 	Queue<Integer> q1 = new LinkedList<Integer>();
@@ -35,7 +33,6 @@ class Queues {
 
 	/* The method pop which return the element poped out of the stack */
 	int pop() {
-		// Your code here
 		if (q1.isEmpty())
 			return -1;
 		int res = 0;

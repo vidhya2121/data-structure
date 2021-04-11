@@ -1,8 +1,5 @@
 package com.amaze.linked_list;
 
-//{ Driver Code Starts
-//driver code
-
 import java.util.*;
 import java.io.*;
 import java.lang.*;
@@ -114,8 +111,6 @@ class RemoveLoop {
  */
 class solver {
 	public static void removeLoop(Node1 head) {
-		// code here
-		// remove the loop without losing any nodes
 		Node1 slow = head;
 		Node1 fast = head.next;
 		while (slow != fast) {

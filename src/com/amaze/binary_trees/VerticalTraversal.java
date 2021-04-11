@@ -117,7 +117,6 @@ class BinaryTree {
 		ArrayList<Integer> res = new ArrayList<>();
 
 		printVertical(root, 0, map);
-//		System.out.println(map);
 		
 		for(Entry<Integer, ArrayList<Integer>> it : map.entrySet()) {
 			for (int i : it.getValue()) {

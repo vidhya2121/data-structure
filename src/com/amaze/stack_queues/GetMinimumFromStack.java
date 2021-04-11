@@ -74,7 +74,6 @@ class GfGS {
 
 	/* returns poped element from stack */
 	int pop() {
-		// Your code here
 		if (s.isEmpty())
 			return -1;
 		int y = s.pop();
@@ -88,7 +87,6 @@ class GfGS {
 
 	/* push element x into the stack */
 	void push(int x) {
-		// Your code here
 		if (s.isEmpty()) {
 			s.push(x);
 			minEle = x;
@@ -114,13 +112,11 @@ class GfGS2 {
 
 	/* returns min element from stack */
 	int getMin() {
-		// Your code here
 		return s.isEmpty() ? -1 : s.peek();
 	}
 
 	/* returns poped element from stack */
 	int pop() {
-		// Your code here
 		if (s.isEmpty())
 			return -1;
 		int oldMin = s.pop();
@@ -132,7 +128,6 @@ class GfGS2 {
 
 	/* push element x into the stack */
 	void push(int x) {
-		// Your code here
 		if (s.isEmpty()) {
 			s.push(x);
 			minEle = x;

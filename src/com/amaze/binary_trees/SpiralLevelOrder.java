@@ -118,7 +118,6 @@ Output: 10 20 30 60 40
  */
 class Spiral {
 	void printSpiral(Node node) {
-		// Your code here
 		for (int i = 1; i <= height(node); i++) {
 			ArrayList<Integer> tmp = new ArrayList<>();
 			lvl(node, i, tmp);

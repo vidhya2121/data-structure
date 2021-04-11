@@ -121,7 +121,6 @@ class Tree9 {
 	}
 
 	private static boolean isSymmetricUti(Node node1, Node node2) {
-		// TODO Auto-generated method stub
 		if (node1 == null && node2 == null)
 			return true;
 		if (node1 == null || node2 == null)

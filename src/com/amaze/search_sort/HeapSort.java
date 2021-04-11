@@ -3,7 +3,22 @@ package com.amaze.search_sort;
 import java.util.Arrays;
 
 public class HeapSort {
-
+/*
+ * loop from n/2 - 1 to 0
+ * 		call heapify(a, n, i)
+ * loop from n-1 to 0
+ * 		swap a[0] and a[i]
+ * 		heapify(a, i, 0)
+ * heapify(arr, n ,i)
+ * 		largest = i
+ * 		l = 2*i + 1
+ * 		r = 2*1 + 2
+ * 		if l<n and a[l] > a[i]
+ * 			largest = a[l]
+ * 		if r<n a[r] > a[largest]
+ * 			largest = a[r]
+ * 		if i != largest swapand heapify(a,i,largest)
+ */
 	public static void main(String args[]) {
 		int arr[] = { 12, 11, 13, 5, 6, 7 };
 		int n = arr.length;

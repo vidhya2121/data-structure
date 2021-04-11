@@ -27,13 +27,23 @@ public class DetectCycleDirected {
 				System.out.println("0");
 		}
 	}
-}// } Driver Code Ends
-
-/* Complete the function below */
-
+}
 /*
- * ArrayList<ArrayList<Integer>> adj: to represent graph containing 'v' vertices
- * and edges between them V: represent number of vertices
+ * have boolean visited array and also a boolean isInRecursionStack array
+ * loop 0 to V
+ * 		if cyclicUtil(adj, visited, isInRecursionStack,i) is true
+ * 			return true
+ * return false
+ * cyclicUtil
+ * 		if isInRecursionStack[i] is true
+ * 			return true
+ * 		mark both visited and isInRecursionStack as true for i
+ * 		loop for ith list
+ * 			if visited[next] == false
+ * 				if cyclicUtil(adj, visited, isInRecursionStack, next) is true
+ * 					return true
+ * 		mark isInRecursionStack[i] as false// at this point the element comes out of rec stack
+ * 		return false
  */
 class Cycle {
 	static boolean isCyclic(ArrayList<ArrayList<Integer>> adj, int V) {

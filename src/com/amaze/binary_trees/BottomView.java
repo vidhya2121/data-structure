@@ -105,24 +105,6 @@ public class BottomView {
 	}
 }
 
-// } Driver Code Ends
-
-// User function Template for Java
-
-// class Node
-// {
-// int data; //data of the node
-// int hd; //horizontal distance of the node
-// Node left, right; //left and right references
-
-// // Constructor of tree node
-// public Node(int key)
-// {
-// data = key;
-// hd = Integer.MAX_VALUE;
-// left = right = null;
-// }
-// }
 /*
  *      			  20
                     /    \
@@ -175,6 +157,5 @@ class Tree3 {
 			res.add(it.getValue());
 		}
 		return res;
-		// Code here
 	}
 }

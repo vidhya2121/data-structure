@@ -3,7 +3,6 @@ package com.amaze.matrix;
 public class SquareSubMatrix {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int m[][] = { { 0, 1, 1, 0, 1 }, { 1, 1, 0, 1, 0 }, { 0, 1, 1, 1, 0 }, { 1, 1, 1, 1, 0 }, { 1, 1, 1, 1, 1 },
 				{ 0, 0, 0, 0, 0 } };
 		printMatrix(m);

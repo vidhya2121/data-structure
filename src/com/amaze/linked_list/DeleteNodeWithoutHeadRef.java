@@ -44,7 +44,6 @@ public class DeleteNodeWithoutHeadRef {
 		while (t > 0) {
 			int n = sc.nextInt();
 			DeleteNodeWithoutHeadRef llist = new DeleteNodeWithoutHeadRef();
-			// int n=Integer.parseInt(br.readLine());
 			int a1 = sc.nextInt();
 			Node head = new Node(a1);
 			llist.addToTheLast(head);
@@ -83,7 +82,6 @@ public class DeleteNodeWithoutHeadRef {
  */
 class Del {
 	void deleteNode(Node node) {
-		// Your code here
 		Node del = node;
 		Node swap = node.next;
 		int t = swap.data;

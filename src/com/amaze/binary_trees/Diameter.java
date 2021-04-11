@@ -89,9 +89,7 @@ public class Diameter {
 		}
 	}
 }
-// } Driver Code Ends
 
-// User function Template for Java
 /*
  * Given a Binary Tree, find diameter of it.
 +The diameter of a tree is the number of nodes on the longest path between two leaves in the tree.
@@ -112,10 +110,8 @@ Output: 4 */
  * 		return max(max(diaLeft, diaRight), hA+hB+1)
  */
 class Tree55 {
-	/* Complete the function to get diameter of a binary tree */
 	int diameter(Node root) {
 		return diameterUtil(root);
-		// Your code here
 	}
 
 	private int diameterUtil(Node root) {

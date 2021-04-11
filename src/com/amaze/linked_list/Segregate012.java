@@ -101,6 +101,5 @@ class Seg {
 			}
 		}
 		return zeroH;
-		// add your code here
 	}
 }

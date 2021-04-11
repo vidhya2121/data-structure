@@ -1,8 +1,5 @@
 package com.amaze.linked_list;
 
-//{ Driver Code Starts
-//driver code
-
 import java.util.*;
 import java.io.*;
 import java.lang.*;
@@ -81,6 +78,5 @@ class Loop {
 			fast = fast.next.next;
 		}
 		return true;
-		// Add code here
 	}
 }

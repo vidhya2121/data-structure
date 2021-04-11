@@ -19,7 +19,7 @@ public class StrStr {
 			t--;
 		}
 	}
-}// } Driver Code Ends
+}
 /*
  * Your task is to implement the function strstr. The function takes two strings as arguments (s,x) 
  * and  locates the occurrence of the string x in the string s.

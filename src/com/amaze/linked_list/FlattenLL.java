@@ -1,6 +1,5 @@
 package com.amaze.linked_list;
 
-//{ Driver Code Starts
 import java.util.Scanner;
 import java.util.*;
 import java.io.*;
@@ -21,7 +20,6 @@ public class FlattenLL {
 	Node2 head;
 
 	void printList(Node2 node) {
-		// Node temp = head;
 		while (node != null) {
 			System.out.print(node.data + " ");
 			node = node.bottom;
@@ -75,7 +73,6 @@ public class FlattenLL {
 				}
 
 			}
-			// list.printList();
 			GfG2 g = new GfG2();
 			Node2 root = g.flatten(list.head);
 			list.printList(root);
@@ -116,11 +113,9 @@ class GfG2 {
 		root.next = flatten(root.next);
 		root = merge(root, root.next);
 		return root;
-		// Your code here
 	}
 
 	private Node2 merge(Node2 a, Node2 b) {
-		// TODO Auto-generated method stub
 		Node2 res;
 		if (a == null)
 			return b;

@@ -54,13 +54,24 @@ public class TopologicalSort {
 		return true;
 	}
 }
-// } Driver Code Ends
-
-/* Complete the function below */
-
 /*
- * ArrayList<ArrayList<>Integer>adj: to represent graph containing 'N' vertices
- * and edges between them N: represent number of vertices
+ * Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge uv, 
+ * vertex u comes before v in the ordering. 
+ * Topological Sorting for a graph is not possible if the graph is not a DAG.
+ */
+/*
+ * have a result array, a visited array and a stack
+ * loop from 0 to V
+ * 		if visited[i] == false
+ * 			topoUtil(i, adj, stack, visited)
+ * pop from stack and push all elements to result array
+ * topoUtil // push element when it exits the call stack
+ * 		mark visited[i] as true
+ * 		iterate thro ith list
+ * 			if next is not visited
+ * 				call topoUtil
+ * 		push i to stack
+ * 		
  */
 class Graph1 {
 	public static int[] topoSort(ArrayList<ArrayList<Integer>> adj, int N) {
@@ -77,9 +88,7 @@ class Graph1 {
 			res[i] = stack.pop();
 			i++;
 		}
-//		System.out.println(Arrays.toString(res));
 		return res;
-		// add your code here
 	}
 
 	private static void topSortUtil(int i, ArrayList<ArrayList<Integer>> adj, Stack<Integer> stack, boolean[] visited) {

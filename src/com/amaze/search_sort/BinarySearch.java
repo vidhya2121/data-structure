@@ -7,7 +7,14 @@ public class BinarySearch {
 		int res = binarySearch(a, 0, a.length, 7);
 		System.out.println(res);
 	}
-
+	/*
+	 * bs(a[], s, e, key)
+	 * 		mid = (s+e)/2
+	 * 		if s>=e return -1
+	 * 		if a[mid]==key return mid
+	 * 		else if key>a[mid]  bs(a,mid+1,e,key)
+	 * 		bs(a,s,mid,key)
+	 */
 	private static int binarySearch(int[] a, int s, int e, int key) {
 		int mid = (s + e) / 2;
 		if (s >= e) {

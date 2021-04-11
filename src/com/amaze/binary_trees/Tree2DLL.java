@@ -107,9 +107,6 @@ public class Tree2DLL {
 
 	}
 }
-// } Driver Code Ends
-
-// User function Template for Java
 
 /*
  * class Node class Node { Node left, right; int data;
@@ -151,7 +148,6 @@ class GfG {
 		inOrder(root);
 
 		return head;
-		// Your code here
 	}
 
 	private void inOrder(Node root) {

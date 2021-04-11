@@ -1,6 +1,5 @@
 package com.amaze.linked_list;
 
-//{ Driver Code Starts
 import java.util.*;
 
 class Merge {
@@ -16,7 +15,6 @@ class Merge {
 		System.out.println();
 	}
 
-	/* Driver program to test above functions */
 	public static void main(String args[]) {
 
 		/*
@@ -96,8 +94,6 @@ class LinkedList {
 		if (headB != null)
 			currA.next = headB;
 		return headA;
-		// This is a "method-only" submission.
-		// You only need to complete this method
 	}
 }
 

@@ -3,8 +3,6 @@ package com.amaze.heap;
 import java.util.Scanner;
 
 public class MinHeapDefiniton {
-	// { Driver Code Starts
-	// Initial Template for Java
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -124,7 +122,6 @@ class MinHeap {
 		return (2 * i + 2);
 	}
 
-	// You need to write code for below three functions
 	int extractMin() {
 		if (heap_size == 0)
 			return -1;
@@ -137,11 +134,9 @@ class MinHeap {
 		heap_size--;
 		MinHeapify(0);
 		return min;
-		// Your code here.
 	}
 
 	void insertKey(int k) {
-		// Your code here.
 		if (heap_size == capacity) {
 			return;
 		}
@@ -174,10 +169,6 @@ class MinHeap {
 		}
 	}
 
-	/*
-	 * You may call below MinHeapify function in above codes. Please do not delete
-	 * this code if you are not writing your own MinHeapify
-	 */
 	void MinHeapify(int i) {
 		int l = left(i);
 		int r = right(i);

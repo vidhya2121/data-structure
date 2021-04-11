@@ -10,6 +10,33 @@ public class MergeSort {
 		ob.mergeSort(a, 0, a.length - 1);
 		System.out.println(Arrays.toString(a));
 	}
+	/*
+	 * call mergeSort(a,0,a.length-1)
+	 * 
+	 * func  mergeSort(a, l, r)
+	 * 		if l < r
+	 * 			mid is l + r whole / 2
+	 * 			mergeSort(a, l, mid)
+	 * 			mergeSort(a, mid+1, r)
+	 * 			merge(a, l , mid ,r)
+	 * 
+	 * merge(a, l ,mid, r)
+	 * 		n1 = mid - l + 1
+	 * 		n2 = r - (mid+1) -1 => r - mid
+	 * 		create 2 temp arrays
+	 * 		loop from 0 to n1 and put those elements in temparr1
+	 * 		loop from 0 to n2 put those in temparr2
+	 * 		i = 0 j = 0 k = l
+	 * 		loop i<n1 and j<n2
+	 * 			if temp1[i] < temp2[j]
+	 * 				a[k] = temp1[i]
+	 * 			similar else
+	 * 			k++
+	 * 		loop i<n1
+	 * 			a[k] = temp1[i]
+	 * 			i++ k++
+	 * 		similar loop for j
+	 */
 
 	private void mergeSort(int[] a, int l, int r) {
 		if (l < r) {

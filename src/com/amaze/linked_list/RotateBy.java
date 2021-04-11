@@ -1,6 +1,5 @@
 package com.amaze.linked_list;
 
-//{ Driver Code Starts
 import java.util.*;
 
 class RotateBy {
@@ -81,6 +80,5 @@ class Rotate {
 			return firstHead;
 		}
 		
-		// add code here
 	}
 }

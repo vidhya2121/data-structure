@@ -38,7 +38,6 @@ class StackQueue {
 	 * The method insert to push element into the queue
 	 */
 	void Push(int x) {
-		// Your code here
 		s1.push(x);
 	}
 
@@ -46,7 +45,6 @@ class StackQueue {
 	 * The method remove which return the element popped out of the queue
 	 */
 	int Pop() {
-		// Your code here
 		if(s1.empty())return -1;
 		int res;
 		while(!s1.empty()) {

@@ -37,7 +37,6 @@ public class NthFromEnd {
 			int n = sc.nextInt();
 			int k = sc.nextInt();
 			NthFromEnd llist = new NthFromEnd();
-			// int n=Integer.parseInt(br.readLine());
 			int a1 = sc.nextInt();
 			Node head = new Node(a1);
 			llist.addToTheLast(head);
@@ -46,9 +45,7 @@ public class NthFromEnd {
 				llist.addToTheLast(new Node(a));
 			}
 
-			// System.out.println(llist.head.data);
 			Nth g = new Nth();
-			// System.out.println(k);
 			System.out.println(g.getNthFromLast(llist.head, k));
 
 			t--;
@@ -82,6 +79,5 @@ class Nth {
 			fast = fast.next;
 		}
 		return slow.data;
-		// Your code here
 	}
 }

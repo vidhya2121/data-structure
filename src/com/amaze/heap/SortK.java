@@ -19,7 +19,6 @@ public class SortK {
 	 * add remaining from pq to array
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int k = 3;
 		int arr[] = { 2, 6, 3, 1, 56, 8 };
 		int n = arr.length;
@@ -35,7 +34,6 @@ public class SortK {
 	}
 
 	private static void kSort(int[] arr, int n, int k) {
-		// TODO Auto-generated method stub
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		for (int i = 0; i < k + 1; i++) {
 			pq.add(arr[i]);

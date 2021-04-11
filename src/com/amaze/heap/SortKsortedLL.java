@@ -13,7 +13,6 @@ class Node {
 }
 
 public class SortKsortedLL {
-	// { Driver Code Starts
 	public static void printList(Node node) {
 		while (node != null) {
 			System.out.print(node.data + " ");
@@ -52,7 +51,7 @@ public class SortKsortedLL {
 			System.out.println();
 		}
 	}
-}// } Driver Code Ends
+}
 
 /*
  * Input:
@@ -103,7 +102,6 @@ class NodeComparator implements Comparator<Node> {
 
 	@Override
 	public int compare(Node o1, Node o2) {
-		// TODO Auto-generated method stub
 		return o1.data - o2.data;
 	}
 

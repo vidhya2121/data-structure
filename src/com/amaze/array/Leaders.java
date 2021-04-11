@@ -43,7 +43,6 @@ public class Leaders {
 			if (arr[i] >= max) {
 				max = arr[i];
 				res.add(arr[i]);
-//				System.out.print(arr[i] + " ");
 			}
 		}
 		for (int i = res.size()-1; i >= 0; i--) {

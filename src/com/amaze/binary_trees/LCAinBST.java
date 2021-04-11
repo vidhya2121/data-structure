@@ -7,9 +7,6 @@ import java.util.Queue;
 
 public class LCAinBST {
 
-	// { Driver Code Starts
-	// Initial Template for Java
-
 	static Node buildTree(String str) {
 
 		if (str.length() == 0 || str.charAt(0) == 'N') {
@@ -98,10 +95,6 @@ public class LCAinBST {
 	}
 
 }
-
-// } Driver Code Ends
-
-// User function Template for Java
 
 /*
  * structure of Node is as follows: class Node{ int data; Node left; Node right;

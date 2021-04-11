@@ -1,6 +1,5 @@
 package com.amaze.linked_list;
 
-//{ Driver Code Starts
 import java.util.*;
 
 class Palindrome {
@@ -35,9 +34,7 @@ class Palindrome {
 
 		while (t > 0) {
 			int n = sc.nextInt();
-			// int k = sc.nextInt();
 			Palindrome llist = new Palindrome();
-			// int n=Integer.parseInt(br.readLine());
 			int a1 = sc.nextInt();
 			Node head = new Node(a1);
 			Node tail = head;
@@ -57,8 +54,6 @@ class Palindrome {
 
 	}
 }
-
-// } Driver Code Ends
 
 /*
  * Structure of class Node is class Node { int data; Node next;
@@ -101,7 +96,6 @@ class PalindromeSol {
 			head2 = head2.next;
 		}
 		
-		// Your code here
 		return true;
 	}
 

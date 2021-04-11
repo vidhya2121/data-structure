@@ -95,10 +95,6 @@ public class Identical {
 	}
 }
 
-// } Driver Code Ends
-
-// User function Template for Java
-
 /*
  Input:
     1       1

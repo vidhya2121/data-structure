@@ -26,9 +26,7 @@ public class Stocks {
 		 */
 		int n = 8;
 		int arr[] = { 100, 180, 260, 310, 100, 40, 535, 695};
-		/*
-		 * 
-		 */
+		
 		buySell(arr, n);
 	}
 

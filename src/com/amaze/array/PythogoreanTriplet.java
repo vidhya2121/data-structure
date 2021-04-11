@@ -43,7 +43,6 @@ public class PythogoreanTriplet {
 			int j = 0;
 			int k = i - 1;
 			while (j < k) {
-				//System.out.println(sqA[j] + " " + sqA[k] + " "+ sqA[i]);
 				if (sqA[j] + sqA[k] == sqA[i]) {
 					return true;
 				} else if (sqA[j] + sqA[k] > sqA[i]) {

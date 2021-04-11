@@ -24,7 +24,6 @@ public class MaxSubArrays {
 			10 10 10 15 15 90 90
 	 */
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int t = Integer.parseInt(br.readLine().trim()); // Inputting the testcases
 		while (t-- > 0) {
@@ -36,7 +35,6 @@ public class MaxSubArrays {
 			for (int i = 0; i < n; i++) {
 				arr[i] = Integer.parseInt(inputLine[i]);
 			}
-			// maxSun(arr, arr.length, k);
 			maxSunOpt(arr, arr.length, k);
 		}
 
@@ -78,20 +76,6 @@ public class MaxSubArrays {
 			d.add(i);
 		}
 		sb.append(a[d.peek()]);
-		System.out.println(sb);
-	}
-
-	private static void maxSun(int[] a, int n, int k) {
-		StringBuffer sb = new StringBuffer();
-		for (int i = 0; i <= n - k; i++) {
-			int max = Integer.MIN_VALUE;
-			for (int j = i; j < i + k; j++) {
-				if (a[j] > max) {
-					max = a[j];
-				}
-			}
-			sb.append(max + " ");
-		}
 		System.out.println(sb);
 	}
 

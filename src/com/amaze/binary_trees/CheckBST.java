@@ -1,7 +1,5 @@
 package com.amaze.binary_trees;
 
-//{ Driver Code Starts
-//Initial Template for Java
 import java.util.LinkedList;
 import java.util.Queue;
 import java.io.*;
@@ -116,11 +114,9 @@ class Tree2 {
 	boolean isBST(Node root) {
 
 		return isBSTUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
-		// code here.
 	}
 
 	private boolean isBSTUtil(Node root, int min, int max) {
-		// TODO Auto-generated method stub
 		if (root == null) {
 			return true;
 		}

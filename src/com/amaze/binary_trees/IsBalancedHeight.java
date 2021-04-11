@@ -131,7 +131,6 @@ class Tree22 {
 	 */
 	boolean isBalanced(Node root) {
 		return height(root) == -1 ? false : true;
-		// Your code here
 	}
 
 	int height(Node node) {

@@ -30,13 +30,26 @@ public class DetectCycleUndirected {
 				System.out.println("0");
 		}
 	}
-}// } Driver Code Ends
-
-// User function Template for Java
-
+}
 /*
- * ArrayList<ArrayList<Integer>> g: represent graph containing 'V' number of
- * vertices and edges between them V: represent number of vertices
+ * The method should return 1 if there is a cycle else it should return 0.
+ */
+/*
+ * have a visited boolean array
+ * loop from 0 to V and perform dfs on all vertex
+ * 		if visited[i] == false
+ * 			if isCyclicUtil(adj, visited, i, -1) is true
+ * 				return true
+ * return false
+ * isCyclicUtil // if u is already visited and u is not a parent of v
+ * 		make visited[i] as true
+ * 		iterate thro ith list
+ * 			if visited[next] is false
+ * 				if isCyclicUtil(adj, visited, next, i) is true
+ * 					return true
+ * 			else if next != p
+ * 					return true
+ * 		return false
  */
 class DetectCycle {
 	static boolean isCyclic(ArrayList<ArrayList<Integer>> adj, int V) {

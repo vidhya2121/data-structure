@@ -18,7 +18,6 @@ public class FirstNonRepeat {
 	a -1 c
  */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		/*
 		 * have input as char array initialize a LinkedHashMap
 		 * for each char in char array

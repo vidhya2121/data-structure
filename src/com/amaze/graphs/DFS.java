@@ -33,33 +33,36 @@ public class DFS {
 	}
 }
 
-// } Driver Code Ends
-
-// User function Template for Java
 
 /*
- * g : adjacency list of graph N : number of vertices
- * 
- * return a list containing the DFS traversal of the given graph
+ *have an arraylist for result and a boolean array for visited
+ *call dfsUtil(0, graph, visited, result)
+ *dfsUtil
+ *		mark visited[i] as true 
+ *		add i to result
+ *		iterate for ith list
+ *			if visited[next] is false 
+ *				dfsUtil(next, graph, visited, result)
+ *		return result
  */
-
 class Traversal2 {
 	static ArrayList<Integer> dfs(ArrayList<ArrayList<Integer>> g, int N) {
 		ArrayList<Integer> res = new ArrayList<>();
 		boolean visited[] = new boolean[N];
-		return dfsUtil(0,g,N,visited,res);
-		
+		return dfsUtil(0, g, N, visited, res);
+
 	}
 
-	private static ArrayList<Integer> dfsUtil(int i, ArrayList<ArrayList<Integer>> g, int n, boolean[] visited, ArrayList<Integer> res) {
-		
+	private static ArrayList<Integer> dfsUtil(int i, ArrayList<ArrayList<Integer>> g, int n, boolean[] visited,
+			ArrayList<Integer> res) {
+
 		visited[i] = true;
 		res.add(i);
 		Iterator<Integer> it = g.get(i).iterator();
 		while (it.hasNext()) {
 			int next = it.next();
 			if (visited[next] == false) {
-				dfsUtil(next,g,n,visited, res);
+				dfsUtil(next, g, n, visited, res);
 			}
 		}
 		return res;

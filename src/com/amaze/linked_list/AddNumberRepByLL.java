@@ -92,8 +92,6 @@ class Add {
 			res.next = new Node(carry);
 		}
 		return reverseList(reHead);
-		// code here
-		// return head of sum list
 	}
 
 	static Node reverseList(Node head) {
@@ -107,6 +105,5 @@ class Add {
 			curr = next;
 		}
 		return prev;
-		// code here
 	}
 }

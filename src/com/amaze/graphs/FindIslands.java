@@ -35,9 +35,30 @@ public class FindIslands {
 }
 
 class Islands {
+	/*
+	 *  1 1 0 0
+		0 0 1 0
+		0 0 0 1
+		0 1 0 0
+		Here, two islands will be formed
+	 */
 
 	// Function to find the number of island in the given list A
 	// N, M: size of list row and column respectively
+	
+	/*
+	 * loop from 0 to N
+	 * 		loop from 0 to N
+	 * 			if A.get(i).get(j) is 1
+	 * 				count++
+	 * 				isIsland(A,i,j,N,M)
+	 * return count
+	 * isIsland
+	 * 		if i or j out of bounds return
+	 * 		if a.get(i).get(j) != 1 return
+	 * 		a.get(i).set(j, dummyValue)
+	 * 		call isIsland 8 times with all combination of i and j
+	 */
 	static int findIslands(ArrayList<ArrayList<Integer>> A, int N, int M) {
 		int count = 0;
 		for (int i = 0; i < N; i++) {

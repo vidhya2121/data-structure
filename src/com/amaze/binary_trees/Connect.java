@@ -130,7 +130,7 @@ public class Connect {
 }
 
 /*
- * used nextRight eithin node object
+ * used nextRight within node object
  * 
  */
 class CTree {
@@ -164,7 +164,6 @@ Your function should set these pointers to point next right for each node.
 	 * 			if q not empty add null to q	
 	 */
 	public static void connect(CNode p) {
-		// code here.
 		Queue<CNode> q = new LinkedList<>();
 		q.add(p);
 		q.add(null);

@@ -1,6 +1,5 @@
 package com.amaze.linked_list;
 
-//{ Driver Code Starts
 import java.util.*;
 import java.io.*;
 

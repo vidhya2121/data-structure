@@ -1,8 +1,5 @@
 package com.amaze.graphs;
 
-//{ Driver Code Starts
-/*package whatever //do not write package name here */
-
 import java.io.*;
 import java.util.*;
 import java.math.*;
@@ -69,13 +66,44 @@ public class AlienDict {
 	}
 
 }
-// } Driver Code Ends
-
-// User function Template for Java
 
 /*
  * dict : array of strings denoting the words in alien langauge N : Size of the
  * dictionary K : Number of characters
+ */
+/*
+ * Given a sorted dictionary of an alien language having N words and k starting alphabets of standard dictionary. 
+ * Find the order of characters in the alien language.
+Note: Many orders may be possible for a particular test case, thus you may return any valid order.
+ */
+/*
+ * Input:
+		2
+		5 4
+		baa abcd abca cab cad
+		3 3
+		caa aaa aab
+		
+	Output:
+		1
+		1
+
+Explanation:
+Test Case 1:
+Input:  Dict[ ] = { "baa", "abcd", "abca", "cab", "cad" }, k = 4
+Output: Function returns "bdac"
+Here order of characters is 'b', 'd', 'a', 'c'
+ */
+/*input string array dict
+ * initialize graph of size k -> 2d arraylist
+ * loop 0 to n - 1
+ * 		w1 = dict[i]
+ * 		w2 = dict[i+1]
+ * 		loop till shorter length
+ * 			if char at j of w1 and w2 are nor equal
+ * 				graph.get(w1.charAt(j)-'a').add(w2.charAt(j)-'a')
+ * 				break
+ * do topological sorting and print res
  */
 class Solutionst {
 	public String findOrder(String[] dict, int N, int K) {
@@ -100,7 +128,6 @@ class Solutionst {
 			str.append((char)(res[i]+'a'));
 		}
 		return str.toString();
-		// Write your code here
 
 	}
 }

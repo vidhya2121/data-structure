@@ -37,7 +37,6 @@ class FindMiddle {
 			Solution g = new Solution();
 			int ans = g.getMiddle(head);
 			System.out.println(ans);
-			// printList(head);
 			t--;
 		}
 	}

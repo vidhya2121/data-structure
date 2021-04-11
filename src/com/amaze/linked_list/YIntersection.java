@@ -1,6 +1,5 @@
 package com.amaze.linked_list;
 
-//{ Driver Code Starts
 import java.util.*;
 
 class YIntersection {
@@ -123,7 +122,6 @@ class Intersect {
 			return -1;
 		}
 		return headA.data;
-		// code here
 	}
 
 	int getCount(Node head) {
